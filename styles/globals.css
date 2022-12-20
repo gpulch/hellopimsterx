@@ -1,0 +1,253 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+@media screen and (max-width: 768px) {
+  .TITLE {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  .logo {
+    padding-top: 10px;
+    align-content: center;
+    width: 100vw;
+    display: flex;
+  }
+
+  .searchBar {
+    position: relative;
+    padding-top: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .searchBar input {
+    width: 70vw;
+    height: 8vh;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.5rem;
+    text-align: center;
+    border: 3px solid black;
+  }
+
+  .cardsWrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+  .rocketImg {
+    align-items: center;
+    display: flex;
+    /* border: solid 5px black; */
+    width: 20vw;
+    justify-content: center;
+  }
+  .rocketImg img {
+    max-width: 50vw;
+    max-height: 20vh;
+    padding: 10px 10px 10px 10px;
+  }
+  .infoWrapper {
+    font-size: large;
+    color: black;
+  }
+
+  .launchCard {
+    display: flex;
+    border: 3px solid black;
+    /* background-color: rgba(168,169,173,255); */
+
+    border-radius: 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 50vh;
+    margin: 15vh 15vw 15vh 15vw;
+    box-shadow: 15px 15px 0 3px rgb(27, 71, 255);
+  }
+
+  .modal {
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .modalCard {
+    position: sticky;
+    width: 80vw;
+    height: 80vh;
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+
+  .modalCard img {
+    justify-content: center;
+    top: 0;
+    height: 25vh;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+
+  .closeModalButton {
+    z-index: 3;
+    margin: 0;
+    padding: 3px 15px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    color: black;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .TITLE {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  .topSection  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo {
+    padding-top: 10px;
+    width: 50vw;
+    display: flex;
+  }
+  .searchBar {
+    position: relative;
+    padding-top: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .searchBar input {
+    width: 30vw;
+    height: 8vh;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.5rem;
+    text-align: center;
+    border: 3px solid black;
+  }
+  .cardsWrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+  .launchCard {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 30px;
+
+    box-shadow: 15px 15px rgba(0, 0, 0);
+    margin: 25px 25px 25px 25px;
+    width: 20vw;
+    height: 20vw;
+  }
+  .launchCard:hover {
+    box-shadow: 15px 15px rgb(27, 71, 255);
+  }
+  .rocketImg {
+    align-items: center;
+    display: flex;
+    /* border: solid 5px black; */
+    height: 50%;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 10px;
+  }
+  .rocketImg img {
+    max-width: 50%;
+    padding: 10px;
+  }
+  .infoWrapper {
+    height: 50%;
+    font-size: large;
+  }
+
+  .modal {
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .modalCard {
+    position: sticky;
+    width: 80vw;
+    height: 80vh;
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+
+  .modalCard img {
+    justify-content: center;
+    top: 0;
+    height: 25vh;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+
+  .closeModalButton {
+    z-index: 3;
+    margin: 0;
+    padding: 3px 15px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    color: black;
+    cursor: pointer;
+  }
+}
