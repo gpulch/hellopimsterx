@@ -68,7 +68,6 @@ export function Home() {
   if (loading) return <>{"Loading"}</>;
   // console.log(data);
 
-
   const onSearch = (query: string) => {
     // function to filter the launchesPast array based on the search query
     console.log(query);
@@ -87,7 +86,11 @@ export function Home() {
         <img src={logo.src} alt="logo" className="logo" />
         <SearchBar onSearch={onSearch} />
       </div>
-      <LaunchCards launchesPast={searchResults} />
+      {searchResults.length > 0 ? ( 
+        <LaunchCards launchesPast={searchResults} /> // if search results are present, render the search results
+      ) : (
+        <LaunchCards launchesPast={launchesPast} /> // else render the launchesPast array
+      )}
       {/* <BodyComponent launchesPast={launchesPast} missionName={missionName} /> */}
     </div>
   );
