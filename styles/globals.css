@@ -15,7 +15,6 @@ a {
   box-sizing: border-box;
 }
 
-
 @media screen and (max-width: 768px) {
   .TITLE {
     font-size: 2rem;
@@ -47,27 +46,36 @@ a {
     border: 3px solid black;
   }
 
-  .cardsWrap {
+  .cardsGrid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
+    overflow: hidden;
   }
-  .rocketImg {
+
+  .launchCardImageSection {
     align-items: center;
     display: flex;
     /* border: solid 5px black; */
-    width: 20vw;
+    height: 50%;
     justify-content: center;
+    overflow: hidden;
+    padding: 2vh 0 2vh 0;
   }
-  .rocketImg img {
+  .launchCardImageSection img {
     max-width: 50vw;
     max-height: 20vh;
     padding: 10px 10px 10px 10px;
   }
-  .infoWrapper {
-    font-size: large;
-    color: black;
+
+  .launchCardInfoSection {
+    width: 100%;
+    border-top: 10px solid black;
+    padding-top: 0vh;
+    height: 50%;
+    /* background-color: lightgray; */
+    font-size: 1.5vh;
   }
 
   .launchCard {
@@ -140,68 +148,79 @@ a {
     text-align: center;
     padding-bottom: 10px;
   }
-  .topSection  {
+  .topSection {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+
+    padding: 2vh 0 2vh 0;
+    /* border-bottom: 10px solid black; */
+    background-color: rgb(0, 0, 0);
   }
   .logo {
-    padding-top: 10px;
-    width: 50vw;
-    display: flex;
+    /* padding-top: 10px; */
+    justify-content: center;
+    max-height: 8vh;
+    max-width: 50%;
   }
   .searchBar {
     position: relative;
-    padding-top: 2vh;
-    display: flex;
+    padding-right: 8vw;
     justify-content: center;
     align-items: center;
   }
   .searchBar input {
     width: 30vw;
-    height: 8vh;
+    min-height: 5vh;
+    max-height: 8vh;
     border-radius: 10px;
     border: none;
     font-size: 1.5rem;
     text-align: center;
     border: 3px solid black;
   }
-  .cardsWrap {
+  .cardsGrid {
+    margin: 0 2vw 0 2vw ;
+    /* padding-top: 3vh; */
+    justify-content: space-around;
+    text-align: center;
+    display: grid;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 620px));
   }
-  .launchCard {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid black;
-    border-radius: 30px;
 
+  .launchCard {
+    margin: 5vh 1vw 5vh 1vw;
+    border: 5px solid black;
+    border-radius: 30px;
     box-shadow: 15px 15px rgba(0, 0, 0);
-    margin: 25px 25px 25px 25px;
-    width: 20vw;
-    height: 20vw;
+    height: 35vh;
+    width: 35vh;
+    overflow: hidden;
   }
   .launchCard:hover {
     box-shadow: 15px 15px rgb(27, 71, 255);
   }
-  .rocketImg {
+  .launchCardImageSection {
     align-items: center;
     display: flex;
     /* border: solid 5px black; */
     height: 50%;
     justify-content: center;
     overflow: hidden;
-    margin-top: 10px;
+    padding: 2vh 0 2vh 0;
   }
-  .rocketImg img {
-    max-width: 50%;
-    padding: 10px;
+  .launchCardImageSection img {
+    max-width: 45%;
+    /* padding: 10px 10px 10px 10px; */
   }
-  .infoWrapper {
+  .launchCardInfoSection {
+    border-top: 10px solid black;
+    padding-top: 0vh;
     height: 50%;
-    font-size: large;
+    background-color: lightgray;
+    font-size: 1.5vh;
   }
 
   .modal {

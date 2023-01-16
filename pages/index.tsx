@@ -86,12 +86,12 @@ export function Home() {
         <img src={logo.src} alt="logo" className="logo" />
         <SearchBar onSearch={onSearch} />
       </div>
-      {searchResults.length > 0 ? ( 
-        <LaunchCards launchesPast={searchResults} /> // if search results are present, render the search results
-      ) : (
-        <LaunchCards launchesPast={launchesPast} /> // else render the launchesPast array
-      )}
-      {/* <BodyComponent launchesPast={launchesPast} missionName={missionName} /> */}
+        {searchResults.length > 0 ? (
+          <LaunchCards launchesPast={searchResults} /> // if search results are present, render the search results
+        ) : (
+          <LaunchCards launchesPast={launchesPast} /> // else render the launchesPast array
+        )}
+        {/* <BodyComponent launchesPast={launchesPast} missionName={missionName} /> */}
     </div>
   );
 }

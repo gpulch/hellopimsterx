@@ -19,7 +19,7 @@ export default function LaunchCards({ launchesPast }: LaunchCardProps) {
   };
 
   return (
-    <div className="cardsWrap">
+    <div className="cardsGrid">
       {launchesPast.map((launch) => {
         const missionName = launch.mission_name;
         const launchDate = launch.launch_date_local;
@@ -38,15 +38,15 @@ export default function LaunchCards({ launchesPast }: LaunchCardProps) {
             onClick={() => toggleModal(launch)}
           >
             {images.length > 0 ? (
-              <div className="rocketImg">
+              <div className="launchCardImageSection">
                 <img src={images[0]} alt={missionName} />
               </div>
             ) : (
-              <div className="rocketImg">
+              <div className="launchCardImageSection">
                 <img src={imagesMissionPatch} alt={missionName} />
               </div>
             )}
-            <div className="infoWrapper">
+            <div className="launchCardInfoSection">
               <h2>{missionName}</h2>
               <p>Launch date: {launchDate}</p>
               {/* <p>Launch site: {launchSite}</p> */}
